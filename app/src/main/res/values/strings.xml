@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="hello_world_hexagone">Hello World Hexagone!</string>
+    <string name="this_is_the_splash_layout">This is the splash layout</string>
+    <string name="this_is_the_home">This is the Home</string>
+    <string name="click_here_to_continue">Click here to continue</string>
 </resources>
