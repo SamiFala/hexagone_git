@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="bonjour_s_n_bienvenue_sur_l_app">Bonjour %s, \n Bienvenue sur l\'app</string>
 </resources>
