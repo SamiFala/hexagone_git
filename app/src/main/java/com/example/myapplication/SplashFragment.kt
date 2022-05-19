@@ -28,7 +28,7 @@ class SplashFragment : Fragment() {
         binding.mbNavigation.setOnClickListener {
 
 
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment("emna"))
         }
     }
 }
