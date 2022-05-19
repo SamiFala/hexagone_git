@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="salutation">Hello World!</string>
     <string name="click_here_to_continue">CLICK HERE TO CONTINUE</string>
+    <string name="this_a_splash_layout">This a Splash Layout</string>
+    <string name="this_is_my_home_layout">This is my Home Layout</string>
 </resources>
