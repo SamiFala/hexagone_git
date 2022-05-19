@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="layout.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>

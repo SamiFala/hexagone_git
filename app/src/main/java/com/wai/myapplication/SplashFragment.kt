@@ -29,7 +29,7 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.mbNavigation.setOnClickListener{
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment(name="Waï"))
 
         }
 
