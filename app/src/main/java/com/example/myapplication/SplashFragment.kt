@@ -25,7 +25,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.mbNavButton.setOnClickListener{
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragment2ToHomeFragment2())
+            findNavController().navigate(SplashFragmentDirections.actionSplashFragment2ToHomeFragment2( "Nana"))
         }
     }
 }

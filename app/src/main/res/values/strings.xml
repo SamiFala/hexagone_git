@@ -4,4 +4,6 @@
     <string name="this_is_the_splash_layout">This is the splash layout</string>
     <string name="this_is_the_home">This is the Home</string>
     <string name="click_here_to_continue">Click here to continue</string>
+    <string name="bonjour_s_bienvenue_dans_l_app">Bonjour %s ! Bienvenue dans l\'app :)</string>
+    <string name="bonjour_s_bienvenue_dans_mon_application">Bonjour %s ! Bienvenue dans mon application !! :)</string>
 </resources>
