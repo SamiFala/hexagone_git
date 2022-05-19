@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="hello_world_hexagone">Hello World Hexagone!</string>
+    <string name="click_here_to_continue">Click here to continue</string>
 </resources>
