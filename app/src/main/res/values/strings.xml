@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="salutation">Hello World!</string>
+    <string name="click_here_to_continue">CLICK HERE TO CONTINUE</string>
 </resources>
