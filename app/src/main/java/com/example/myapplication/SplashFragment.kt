@@ -25,8 +25,9 @@ class SplashFragment : Fragment() {
             super.onViewCreated(view, savedInstanceState)
 
 
-
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment("Rachel"))
+            binding.mbNav.setOnClickListener {
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment("Rachel"))
+            }
         }
 
 }
