@@ -26,7 +26,7 @@ class SplashFragment : Fragment() {
 
 
 
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment("Rachel"))
         }
 
 }
