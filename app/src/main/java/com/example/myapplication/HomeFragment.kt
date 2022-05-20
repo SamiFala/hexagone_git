@@ -43,8 +43,14 @@ class HomeFragment : Fragment() {
 
         binding.mbMoins.setOnClickListener {
             viewModel.minus()
-
+            if (viewModel.count.value?.minus(1)!! < 0) {
+                viewModel.count.value = 0
+            }
         }
+        binding.mbReset.setOnClickListener {
+            viewModel.reset()
+        }
+
 
 
     }
