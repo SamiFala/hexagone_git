@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="hello_world_hexagone">Hello World Hexagone!</string>
-    <string name="click_here_to_continue">click here to continue</string>
+    <string name="click_here_to_continue">Cliquez ici pour naviguer</string>
     <string name="this_s_is_a_home_layout">Hello %s to home Layout</string>
+    <string name="votre_nom">votre nom</string>
 </resources>
