@@ -14,6 +14,7 @@ class HomeFragment: Fragment() {
 
     private lateinit var binding: HomeLayoutBinding
     private val navArgs: HomeFragmentArgs by navArgs()
+    private var count : Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +30,17 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name)
+        binding.mbPlus.setOnClickListener(){
+
+            count +=1
+            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, count.toString())
+        }
+
+        binding.mbMoins.setOnClickListener(){
+            count -=1
+            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, count.toString())
+        }
+
+        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, count.toString())
     }
 }

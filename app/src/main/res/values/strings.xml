@@ -4,7 +4,7 @@
     <string name="click_here_to_continue">CLICK HERE TO CONTINUE</string>
     <string name="this_a_splash_layout">This a Splash Layout</string>
     <string name="this_is_my_home_layout">This is my Home Layout</string>
-    <string name="bonjour_s_welcome_to_my_app">Bonjour %s , welcome to my App</string>
+    <string name="bonjour_s_welcome_to_my_app">Bonjour %s , welcome to my App. Vous êtes la visite n°%s</string>
     <string name="entrez_votre_nom">Entrez votre nom</string>
     <string name="hey">Hey👋</string>
 </resources>
