@@ -14,5 +14,10 @@ class MainViewModel : ViewModel() {
 
     fun moins(){
         count.value = count.value?.minus(1)
+
+    }
+
+    fun reset(){
+        count.value = 0
     }
 }

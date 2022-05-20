@@ -49,5 +49,8 @@ class HomeFragment: Fragment() {
             viewModel.moins()
         }
 
+        binding.mbReset.setOnClickListener(){
+            viewModel.reset()
+        }
     }
 }
