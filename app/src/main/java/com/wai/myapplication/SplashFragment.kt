@@ -37,7 +37,7 @@ class SplashFragment : Fragment() {
             if(!name.isNullOrBlank()){
                 findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment(name))
             }else{
-                Toast.makeText(requireContext(), "Veuillez entrer votre nom", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Veuillez entrer votre nom.", Toast.LENGTH_LONG).show()
             }
 
 
