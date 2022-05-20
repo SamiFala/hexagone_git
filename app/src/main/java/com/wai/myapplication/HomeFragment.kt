@@ -35,15 +35,15 @@ class HomeFragment: Fragment() {
 
         binding.mbPlus.setOnClickListener(){
 
-            viewModel.count +=1
-            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.toString())
+            viewModel.plus()
+            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
         }
 
         binding.mbMoins.setOnClickListener(){
-            viewModel.count -=1
-            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.toString())
+            viewModel.moins()
+            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
         }
 
-        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.toString())
+        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
     }
 }
