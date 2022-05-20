@@ -6,4 +6,7 @@
     <string name="click_here_to_continue">Click here to continue</string>
     <string name="bonjour_s_bienvenue_dans_l_app">Bonjour %s ! Bienvenue dans l\'app :)</string>
     <string name="bonjour_s_bienvenue_dans_mon_application">Bonjour %s ! Bienvenue dans mon application !! :)</string>
+    <string name="emoji">​🤌</string>
+    <string name="quel_est_ton_nom">Quel est ton nom?</string>
+    <string name="bonjour_s_bienvenue_dans_mon_app_vous_tes_la_visite_n_s">Bonjour %s, bienvenue dans mon app! Vous êtes à la visite n°%s</string>
 </resources>

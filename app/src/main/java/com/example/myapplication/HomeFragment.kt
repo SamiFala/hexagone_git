@@ -28,6 +28,17 @@ class HomeFragment : Fragment () {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvTitle.text = getString(R.string.bonjour_s_bienvenue_dans_l_app, navArgs.name)
+        var count = 0
+        binding.tvTitle.text = getString(R.string.bonjour_s_bienvenue_dans_mon_app_vous_tes_la_visite_n_s, navArgs.name, count.toString())
+        binding.mbPlus.setOnClickListener {
+            count += 1
+            binding.tvTitle.text = getString(R.string.bonjour_s_bienvenue_dans_mon_app_vous_tes_la_visite_n_s, navArgs.name, count.toString())
+
+        }
+        binding.mbMoins.setOnClickListener {
+            count -= 1
+            binding.tvTitle.text = getString(R.string.bonjour_s_bienvenue_dans_mon_app_vous_tes_la_visite_n_s, navArgs.name, count.toString())
+
+        }
     }
 }

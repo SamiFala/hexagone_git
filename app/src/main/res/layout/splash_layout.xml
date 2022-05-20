@@ -14,9 +14,25 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/this_is_the_splash_layout"
+            android:gravity="center"
+            android:text="@string/emoji"
             android:textColor="@color/black"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/quel_est_ton_nom"
+            android:textColor="@color/black"
+            android:textStyle="italic"
             android:textSize="30sp"
+            android:layout_marginHorizontal="32dp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +47,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:layout_constraintTop_toTopOf="@+id/et_name"
             app:cornerRadius="@android:dimen/app_icon_size"
             />
 
