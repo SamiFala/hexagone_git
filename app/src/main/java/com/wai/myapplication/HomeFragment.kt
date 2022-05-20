@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.wai.myapplication.MainViewModel
 import com.wai.myapplication.R
@@ -16,7 +17,6 @@ class HomeFragment: Fragment() {
 
     private lateinit var binding: HomeLayoutBinding
     private val navArgs: HomeFragmentArgs by navArgs()
-    private var count : Int = 0
     private val viewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -33,17 +33,21 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
+
+        viewModel.count.observe(viewLifecycleOwner, Observer{
+            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
+        })
+
         binding.mbPlus.setOnClickListener(){
 
             viewModel.plus()
-            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
         }
 
         binding.mbMoins.setOnClickListener(){
+
             viewModel.moins()
-            binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
         }
 
-        binding.tvTitle.text = getString(R.string.bonjour_s_welcome_to_my_app, navArgs.name, viewModel.count.value.toString())
     }
 }
