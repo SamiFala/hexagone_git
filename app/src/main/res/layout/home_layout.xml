@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/bonjour_s_n_bienvenue_sur_l_app"
-            android:textSize="50sp"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="50dp"
+            android:layout_marginHorizontal="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mb_moins"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/purple_200"
                 android:text="@string/moins"
@@ -48,7 +48,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mb_plus"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/purple_200"
                 android:text="@string/plus"
@@ -57,6 +57,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                android:text="Remettre à 0"
+                android:textSize="10sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mb_plus"
+                app:layout_constraintStart_toEndOf="@+id/mb_moins" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

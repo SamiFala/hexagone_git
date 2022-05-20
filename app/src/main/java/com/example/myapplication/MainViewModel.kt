@@ -25,6 +25,10 @@ class MainViewModel: ViewModel () {
         }
     }
 
+    fun reset() {
+        count.value = 0
+    }
+
     fun initError() {
         error.value = false
     }

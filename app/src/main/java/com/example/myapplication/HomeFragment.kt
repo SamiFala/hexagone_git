@@ -49,5 +49,8 @@ class HomeFragment: Fragment() {
                 viewModel.initError()
             }
         })
+        binding.mbReset.setOnClickListener {
+            viewModel.reset()
+        }
     }
 }
