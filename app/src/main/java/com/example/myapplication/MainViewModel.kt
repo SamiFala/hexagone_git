@@ -13,19 +13,15 @@ class MainViewModel : ViewModel() {
     }
 
     fun minus() {
-
         count.value?.let {
             if (it > 0 ) {
+                error.value = false;
                 count.value = count.value?.minus(1)
             }
             else{
                 error.value = true
             }
         }
-    }
-
-    fun initError() {
-        error.value = false
     }
 
     fun reset () {
