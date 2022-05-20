@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
     var count: MutableLiveData<Int> = MutableLiveData(0)
     var error:  MutableLiveData<Boolean> = MutableLiveData(false)
+
     fun plus() {
         count.value = count.value?.plus(1)
     }
@@ -15,7 +16,6 @@ class MainViewModel : ViewModel() {
     fun minus() {
         count.value?.let {
             if (it > 0 ) {
-                error.value = false;
                 count.value = count.value?.minus(1)
             }
             else{

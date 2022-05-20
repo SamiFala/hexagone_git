@@ -52,8 +52,8 @@ class HomeFragment : Fragment() {
             viewModel.reset()
         }
 
-        viewModel.error.observe(viewLifecycleOwner, Observer {
-            if (it){
+        viewModel.error.observe(viewLifecycleOwner, Observer { error ->
+            if (error == true){
                 Toast.makeText(requireContext(), "Une erreur est survenue", Toast.LENGTH_LONG).show()
             }
         })
