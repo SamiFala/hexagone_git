@@ -10,13 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:textSize="50sp"
+            android:gravity="center"
+            android:text=" 🥸 "
+            android:textSize="100sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ecrivez_votre_nom"
+            android:textSize="25sp"
+            android:layout_marginHorizontal="32dp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -27,15 +42,14 @@
             android:id="@+id/mb_navigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
             android:backgroundTint="@color/purple_200"
-            android:text="Appuier ici"
-            android:textSize="50sp"
+            android:text="@string/appuier_ici"
+            android:textSize="25sp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
