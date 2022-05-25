@@ -1,10 +1,7 @@
 package com.example.myapplication
 
-data class CountryDTO(
-    val country: CountriesDto,
-)
 
-data class CountriesDto(
+data class CountryDTO(
     val name : String,
     val capital: String,
     val population: Int,
