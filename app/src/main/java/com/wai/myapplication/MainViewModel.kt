@@ -56,6 +56,10 @@ class MainViewModel : ViewModel() {
             // Récupération du contenu
 
             val body = response.body()
+            body?.forEach{
+                println("THIS COUNTRY ${it.name}")
+
+        }
             println(body)
             countries.value = body
 
