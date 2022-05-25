@@ -15,7 +15,7 @@ import com.wai.myapplication.databinding.SplashLayoutBinding
 class SplashFragment : Fragment() {
 
     private lateinit var binding: SplashLayoutBinding
-    private val viewModel : MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,15 +33,20 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getAllCountries()
-        binding.mbNavigation.setOnClickListener{
+        binding.mbNavigation.setOnClickListener {
             // Récupère la valeur saisie après le click du bouton
             val name = binding.etName.text.toString()
 
             // Condition pour ne valider que un nom non null
-            if(!name.isNullOrBlank()){
-                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment(name))
-            }else{
-                Toast.makeText(requireContext(), "Veuillez entrer votre nom.", Toast.LENGTH_LONG).show()
+            if (!name.isNullOrBlank()) {
+                findNavController().navigate(
+                    SplashFragmentDirections.actionSplashFragmentToHomeFragment(
+                        name
+                    )
+                )
+            } else {
+                Toast.makeText(requireContext(), "Veuillez entrer votre nom.", Toast.LENGTH_LONG)
+                    .show()
             }
 
 
