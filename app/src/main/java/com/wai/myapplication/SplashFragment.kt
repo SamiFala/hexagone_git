@@ -6,13 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.wai.myapplication.MainViewModel
 import com.wai.myapplication.databinding.SplashLayoutBinding
 
 
 class SplashFragment : Fragment() {
 
     private lateinit var binding: SplashLayoutBinding
+    private val viewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +32,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.getAllCountries()
         binding.mbNavigation.setOnClickListener{
             // Récupère la valeur saisie après le click du bouton
             val name = binding.etName.text.toString()
