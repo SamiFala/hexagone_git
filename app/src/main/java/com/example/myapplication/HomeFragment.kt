@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = HomeLayoutBinding.inflate(inflater,container, false)
+        binding = HomeLayoutBinding.inflate(inflater, container, false)
         return binding.root
         //return super.onCreateView(inflater, container, savedInstanceState)
     }
@@ -32,10 +32,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvTitle.text = getString(R.string.this_s_is_a_home_layout, navArgs.name, viewModel.count.value.toString())
+        binding.tvTitle.text = getString(
+            R.string.this_s_is_a_home_layout,
+            navArgs.name,
+            viewModel.count.value.toString()
+        )
 
         viewModel.count.observe(viewLifecycleOwner, Observer {
-            binding.tvTitle.text = getString(R.string.this_s_is_a_home_layout, navArgs.name, viewModel.count.value.toString())
+            binding.tvTitle.text = getString(
+                R.string.this_s_is_a_home_layout,
+                navArgs.name,
+                viewModel.count.value.toString()
+            )
         })
 
         binding.mbPlus.setOnClickListener {
@@ -45,16 +53,17 @@ class HomeFragment : Fragment() {
         binding.mbMoins.setOnClickListener {
             viewModel.minus()
             //if (viewModel.count.value?.minus(1)!! < 0) {
-               // viewModel.count.value = 0
-           // }
+            // viewModel.count.value = 0
+            // }
         }
         binding.mbReset.setOnClickListener {
             viewModel.reset()
         }
 
         viewModel.error.observe(viewLifecycleOwner, Observer { error ->
-            if (error == true){
-                Toast.makeText(requireContext(), "Une erreur est survenue", Toast.LENGTH_LONG).show()
+            if (error == true) {
+                Toast.makeText(requireContext(), "Une erreur est survenue", Toast.LENGTH_LONG)
+                    .show()
             }
         })
 

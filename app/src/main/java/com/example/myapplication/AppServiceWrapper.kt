@@ -11,7 +11,8 @@ class AppServiceWrapper {
     @Singleton
     class AppServiceWrapper @Inject constructor(private val appService: AppService) {
         private suspend fun <T> ioContextExecutor(block: suspend () -> T): T? = withContext(
-            Dispatchers.IO) {
+            Dispatchers.IO
+        ) {
             try {
                 block()
             } catch (ex: Exception) {
